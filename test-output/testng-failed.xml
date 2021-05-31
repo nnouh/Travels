@@ -5,6 +5,7 @@
     <classes>
       <class name="php.travels.TestRgistrationPage">
         <methods>
+          <include name="close"/>
           <include name="openUrl"/>
           <include name="regTest"/>
         </methods>

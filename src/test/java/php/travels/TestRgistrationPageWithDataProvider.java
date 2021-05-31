@@ -7,18 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestRgistrationPage {
+public class TestRgistrationPageWithDataProvider {
 	public WebDriver driver;
-	String fnam = "Nashwa";
-	String lsname = "Nouh";
-	String tel = "123456";
-	String eml = "d@gmail.com";
-	String Paswrd= "1234567"; 
-	String conpw = "1234567";
 
 	@BeforeClass
 	public void openUrl() {
@@ -28,11 +23,19 @@ public class TestRgistrationPage {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
+	
+	@DataProvider(name="testdata")
+	public static Object [][] userData (){
+		return new Object[][] {
+				{"Nashwa","Nouh","1234567","tx@gmail.com","1234567", "1234567"},
+				{"Nouh","Nouh","1234567","yu@gmail.com","1234567", "1234567"}
+			
+				};
+		
+	}
 
-
-
-	@Test
-	public void regTest()
+	@Test(dataProvider ="testdata")
+	public void regTest(String fnam, String lsname,String tel, String eml, String Paswrd, String conpw)
 	{
 		RegistrationClass regObj = new RegistrationClass(driver);
 		regObj.registration(fnam, lsname, tel, eml,Paswrd,conpw);

@@ -2,19 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-28T00:59:17 EET" name="Default suite" finished-at="2021-05-28T00:59:55 EET" duration-ms="37535">
+  <suite started-at="2021-05-31T21:47:30 EET" name="Default suite" finished-at="2021-05-31T21:48:06 EET" duration-ms="35613">
     <groups>
     </groups>
-    <test started-at="2021-05-28T00:59:17 EET" name="Default test" finished-at="2021-05-28T00:59:55 EET" duration-ms="37535">
+    <test started-at="2021-05-31T21:47:30 EET" name="Default test" finished-at="2021-05-31T21:48:06 EET" duration-ms="35613">
       <class name="php.travels.TestRgistrationPage">
-        <test-method is-config="true" signature="openUrl()[pri:0, instance:php.travels.TestRgistrationPage@2bbf180e]" started-at="2021-05-28T00:59:17 EET" name="openUrl" finished-at="2021-05-28T00:59:47 EET" duration-ms="29954" status="PASS">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:php.travels.TestRgistrationPage@66f57048]" started-at="2021-05-31T21:47:30 EET" name="openUrl" finished-at="2021-05-31T21:47:54 EET" duration-ms="24309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openUrl -->
-        <test-method signature="regTest()[pri:0, instance:php.travels.TestRgistrationPage@2bbf180e]" started-at="2021-05-28T00:59:47 EET" name="regTest" finished-at="2021-05-28T00:59:55 EET" duration-ms="7394" status="PASS">
+        <test-method signature="regTest()[pri:0, instance:php.travels.TestRgistrationPage@66f57048]" started-at="2021-05-31T21:47:54 EET" name="regTest" finished-at="2021-05-31T21:48:04 EET" duration-ms="9390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:php.travels.TestRgistrationPage@66f57048]" started-at="2021-05-31T21:48:05 EET" name="close" finished-at="2021-05-31T21:48:06 EET" duration-ms="1003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
       </class> <!-- php.travels.TestRgistrationPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
