@@ -1,7 +1,6 @@
 package php.travels;
 
-import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -9,14 +8,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.concurrent.TimeUnit;
+
+
 
 public class TestRgistrationPage {
 	public WebDriver driver;
 	String fnam = "Nashwa";
 	String lsname = "Nouh";
 	String tel = "123456";
-	String eml = "d@gmail.com";
+	String eml = "d4@gmail.com";
 	String Paswrd= "1234567"; 
 	String conpw = "1234567";
 
