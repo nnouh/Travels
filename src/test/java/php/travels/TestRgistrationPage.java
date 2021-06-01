@@ -17,13 +17,6 @@ import java.util.concurrent.TimeUnit;
 public class TestRgistrationPage {
 	public WebDriver driver;
 
-	String fnam = "Nashwa";
-	String lsname = "Nouh";
-	String tel = "123456";
-	//String email = "d7dd@gmail.com";
-	//String Password= "1234567";
-	String repassword = "1234567";
-
 	@BeforeClass
 	public void openUrl() {
 		WebDriverManager.chromedriver().setup();
