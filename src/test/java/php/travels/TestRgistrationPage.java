@@ -1,6 +1,8 @@
 package php.travels;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Link;
+import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -10,18 +12,26 @@ import org.testng.annotations.Test;
 import utilites.SpreedSheet;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
 
 public class TestRgistrationPage {
 	public WebDriver driver;
+	Properties prop;
+
 
 	@BeforeClass
-	public void openUrl() {
+	public void openUrl() throws IOException {
+		prop = new Properties();
+		prop.load(new FileReader("resourcse/config.properties"));
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.navigate().to("https://phptravels.net/register/en");
+		driver.navigate().to(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
@@ -29,11 +39,14 @@ public class TestRgistrationPage {
 
 
 	@Test
+	@Description("test for registration from group 2")
+	@Link("www.google.com")
 	public void regTest()
 	{
+
 		String fileName = "resourcse/signup.xlsx";
 		var spreadsheet = new SpreedSheet(new File(fileName));
-		spreadsheet.switchToSheets("user1");
+		spreadsheet.switchToSheets("user2");
 		int row = 1;
 		String firstname = spreadsheet.GetCellData("fnam",row);
 		String lastName = spreadsheet.GetCellData("lsname",row);
